@@ -1,0 +1,25 @@
+# Template information section
+name: "mvvm_c"
+summary: "MVVM+C module template."
+author: "Osmaev Ruslan"
+version: "0.1.0"
+license: "MIT"
+
+# The declarations for code files
+
+code_files:
+
+- {name: {{ module_info.file_basename }}/Module/Module.swift, path: mvvm_c/Module/Module/Module.swift.liquid}
+- {name: {{ module_info.file_basename }}/Module/ModuleAssembly.swift, path: mvvm_c/Module/Module/ModuleAssembly.swift.liquid}
+
+- {name: {{ module_info.file_basename }}/UI/ViewController.swift, path: mvvm_c/Module/UI/ViewController.swift.liquid}
+- {name: {{ module_info.file_basename }}/UI/View.swift, path: mvvm_c/Module/UI/View.swift.liquid}
+
+- {name: {{ module_info.file_basename }}/UseCase/UseCase.swift, path: mvvm_c/Module/UseCase/UseCase.swift.liquid}
+- {name: {{ module_info.file_basename }}/UseCase/UseCaseImpl.swift, path: mvvm_c/Module/UseCase/UseCaseImpl.swift.liquid}
+
+- {name: {{ module_info.file_basename }}/ViewModel/ViewModel.swift, path: mvvm_c/Module/ViewModel/ViewModel.swift.liquid}
+
+- {name: {{ module_info.file_basename }}/Localizable.strings, path: mvvm_c/Module/Localizable.strings.liquid}
+
+- {name: {{ module_info.file_basename }}/Coordinator.swift, path: mvvm_c/Coordinator.swift.liquid}
