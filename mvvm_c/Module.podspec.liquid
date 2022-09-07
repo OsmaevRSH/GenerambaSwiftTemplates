@@ -1,0 +1,13 @@
+Pod::Spec.new do |s|
+  s.name             = '{{ module_info.name | capitalize }}'
+  s.version          = '0.1.0'
+  s.summary          = 'A short description of {{ module_info.name | capitalize }}.'
+
+  s.homepage         = ''
+  s.license          = { :type => 'MIT', :file => 'LICENSE' }
+  s.author           = { 'OsmaevRSH' => 'osmaevrsh@gmail.com' }}
+
+  s.ios.deployment_target = '13.0'
+
+  s.source_files = '{{ module_info.name | capitalize }}/Sources/**/*'
+end

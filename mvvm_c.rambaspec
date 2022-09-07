@@ -9,17 +9,19 @@ license: "MIT"
 
 code_files:
 
-- {name: Module/Module.swift, path: mvvm_c/Module/Module/Module.swift.liquid}
-- {name: Module/ModuleAssembly.swift, path: mvvm_c/Module/Module/ModuleAssembly.swift.liquid}
+- {name: Source/Module/Module.swift, path: mvvm_c/Module/Module/Module.swift.liquid}
+- {name: Source/Module/ModuleAssembly.swift, path: mvvm_c/Module/Module/ModuleAssembly.swift.liquid}
 
-- {name: UI/ViewController.swift, path: mvvm_c/Module/UI/ViewController.swift.liquid}
-- {name: UI/View.swift, path: mvvm_c/Module/UI/View.swift.liquid}
+- {name: Source/UI/ViewController.swift, path: mvvm_c/Module/UI/ViewController.swift.liquid}
+- {name: Source/UI/View.swift, path: mvvm_c/Module/UI/View.swift.liquid}
 
-- {name: UseCase/UseCase.swift, path: mvvm_c/Module/UseCase/UseCase.swift.liquid}
-- {name: UseCase/UseCaseImpl.swift, path: mvvm_c/Module/UseCase/UseCaseImpl.swift.liquid}
+- {name: Source/UseCase/UseCase.swift, path: mvvm_c/Module/UseCase/UseCase.swift.liquid}
+- {name: Source/UseCase/UseCaseImpl.swift, path: mvvm_c/Module/UseCase/UseCaseImpl.swift.liquid}
 
-- {name: ViewModel/ViewModel.swift, path: mvvm_c/Module/ViewModel/ViewModel.swift.liquid}
+- {name: Source/ViewModel/ViewModel.swift, path: mvvm_c/Module/ViewModel/ViewModel.swift.liquid}
 
-- {name: Localizable.strings, path: mvvm_c/Module/Localizable.strings.liquid}
+- {name: Source/Localizable.strings, path: mvvm_c/Module/Localizable.strings.liquid}
 
-- {name: Coordinator.swift, path: mvvm_c/Coordinator.swift.liquid}
+- {name: Source/Coordinator.swift, path: mvvm_c/Module/Coordinator.swift.liquid}
+
+- {name: Module.podspec, path: mvvm_c/Module.podspec.liquid}
