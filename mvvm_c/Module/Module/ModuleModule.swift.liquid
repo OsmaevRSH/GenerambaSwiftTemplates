@@ -1,0 +1,32 @@
+//
+//  {{ module_info.name | capitalize }} module - {{ module_info.file_name }}
+//  {{ module_info.project_name }}
+//
+//  Created by {{ developer.name }} on {{ date }}.
+//  Copyright © {{ year }} {{ developer.company }}. All rights reserved.
+//
+
+import RxCocoa
+
+// MARK: - Input
+protocol {{ module_info.name | capitalize }}ModuleInput {}
+
+// MARK: - Output
+protocol {{ module_info.name | capitalize }}ModuleOutput {}
+
+final class {{ module_info.name | capitalize }}Module {
+    let view: UIViewController
+    let output: {{ module_info.name | capitalize }}ModuleOutput
+    let input: {{ module_info.name | capitalize }}ModuleInput
+    
+    init(
+        view: UIViewController,
+        output: {{ module_info.name | capitalize }}ModuleOutput,
+        input: {{ module_info.name | capitalize }}ModuleInput
+    ) {
+        self.view = view
+        self.input = input
+        self.output = output
+    }
+}
+

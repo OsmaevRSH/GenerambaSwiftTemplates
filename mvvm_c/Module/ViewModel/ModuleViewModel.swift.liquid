@@ -1,0 +1,45 @@
+//
+//  {{ module_info.name | capitalize }} module - {{ module_info.file_name }}
+//  {{ module_info.project_name }}
+//
+//  Created by {{ developer.name }} on {{ date }}.
+//  Copyright © {{ year }} {{ developer.company }}. All rights reserved.
+//
+
+import RxSwift
+import RxCocoa
+
+final class {{ module_info.name | capitalize }}ViewModel {
+    
+    let input = Input()
+    var output: Output
+    
+    init(
+        useCase: {{ module_info.name | capitalize }}UseCase
+    ) {
+        let fromView = input.view
+        
+        let view = Output.View()
+        let coord = Output.Coord()
+        
+        output = .init(view: view, coord: coord)
+    }
+}
+
+extension {{ module_info.name | capitalize }}ViewModel {
+    struct Input {
+        let view = View()
+        let coord = Coord()
+        
+        struct View {}
+        class Coord: {{ module_info.name | capitalize }}ModuleInput {}
+    }
+    
+    struct Output {
+        var view: View
+        var coord: Coord
+        
+        struct View {}
+        class Coord: {{ module_info.name | capitalize }}ModuleOutput {}
+    }
+}
