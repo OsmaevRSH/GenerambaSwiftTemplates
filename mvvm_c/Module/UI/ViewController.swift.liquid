@@ -1,5 +1,5 @@
 //
-//  {{ module_info.name | capitalize }} module - {{ module_info.file_name }}
+//  {{ module_info.name }} module - {{ module_info.file_name }}
 //  {{ module_info.project_name }}
 //
 //  Created by {{ developer.name }} on {{ date }}.
@@ -10,21 +10,21 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-final class {{ module_info.name | capitalize }}ViewController: UIViewController {
+final class {{ module_info.name }}ViewController: UIViewController {
     
     // MARK: - Private properties
-    private var customView: {{ module_info.name | capitalize }}View {
+    private var customView: {{ module_info.name }}View {
         guard
-            let customView = view as? {{ module_info.name | capitalize }}View
-        else { fatalError("CustomView must have \({{ module_info.name | capitalize }}View.self) type") }
+            let customView = view as? {{ module_info.name }}View
+        else { fatalError("CustomView must have \({{ module_info.name }}View.self) type") }
         return customView
     }
     
-    private let viewModel: {{ module_info.name | capitalize }}ViewModel
+    private let viewModel: {{ module_info.name }}ViewModel
     private let bag = DisposeBag()
     
     init(
-        viewModel: {{ module_info.name | capitalize }}ViewModel
+        viewModel: {{ module_info.name }}ViewModel
     ) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
@@ -40,12 +40,12 @@ final class {{ module_info.name | capitalize }}ViewController: UIViewController 
     }
     
     override func loadView() {
-        view = {{ module_info.name | capitalize }}View(frame: .zero)
+        view = {{ module_info.name }}View(frame: .zero)
     }
 }
 
-private extension {{ module_info.name | capitalize }}ViewController {
-    func bind(to viewModel: {{ module_info.name | capitalize }}ViewModel) {
+private extension {{ module_info.name }}ViewController {
+    func bind(to viewModel: {{ module_info.name }}ViewModel) {
         let input = viewModel.input.view
         let output = viewModel.output.view
     }

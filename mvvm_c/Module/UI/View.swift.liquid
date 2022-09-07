@@ -1,5 +1,5 @@
 //
-//  {{ module_info.name | capitalize }} module - {{ module_info.file_name }}
+//  {{ module_info.name }} module - {{ module_info.file_name }}
 //  {{ module_info.project_name }}
 //
 //  Created by {{ developer.name }} on {{ date }}.
@@ -11,7 +11,7 @@ import RxSwift
 import RxCocoa
 import SnapKit
 
-final class {{ module_info.name | capitalize }}View: UIView {
+final class {{ module_info.name }}View: UIView {
     // MARK: - Private properties
     
     // MARK: - Init
@@ -29,19 +29,19 @@ final class {{ module_info.name | capitalize }}View: UIView {
     }
 }
 
-private extension {{ module_info.name | capitalize }}View {
+private extension {{ module_info.name }}View {
     func configure(model: Model) {
         
     }
 }
 
-extension {{ module_info.name | capitalize }}View {
+extension {{ module_info.name }}View {
     struct Model {
         
     }
 }
 
-extension Reactive where Base == {{ module_info.name | capitalize }}View {
+extension Reactive where Base == {{ module_info.name }}View {
     var model: Binder<Base.Model> {
         Binder(base) { $0.configure(model: $1)}
     }

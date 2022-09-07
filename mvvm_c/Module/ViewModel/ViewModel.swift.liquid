@@ -1,5 +1,5 @@
 //
-//  {{ module_info.name | capitalize }} module - {{ module_info.file_name }}
+//  {{ module_info.name }} module - {{ module_info.file_name }}
 //  {{ module_info.project_name }}
 //
 //  Created by {{ developer.name }} on {{ date }}.
@@ -9,13 +9,13 @@
 import RxSwift
 import RxCocoa
 
-final class {{ module_info.name | capitalize }}ViewModel {
+final class {{ module_info.name }}ViewModel {
     
     let input = Input()
     var output: Output
     
     init(
-        useCase: {{ module_info.name | capitalize }}UseCase
+        useCase: {{ module_info.name }}UseCase
     ) {
         let fromView = input.view
         
@@ -26,13 +26,13 @@ final class {{ module_info.name | capitalize }}ViewModel {
     }
 }
 
-extension {{ module_info.name | capitalize }}ViewModel {
+extension {{ module_info.name }}ViewModel {
     struct Input {
         let view = View()
         let coord = Coord()
         
         struct View {}
-        class Coord: {{ module_info.name | capitalize }}ModuleInput {}
+        class Coord: {{ module_info.name }}ModuleInput {}
     }
     
     struct Output {
@@ -40,6 +40,6 @@ extension {{ module_info.name | capitalize }}ViewModel {
         var coord: Coord
         
         struct View {}
-        class Coord: {{ module_info.name | capitalize }}ModuleOutput {}
+        class Coord: {{ module_info.name }}ModuleOutput {}
     }
 }

@@ -1,13 +1,14 @@
 Pod::Spec.new do |s|
-  s.name             = '{{ module_info.name | capitalize }}'
+  s.name             = '{{ module_info.name }}'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of {{ module_info.name | capitalize }}.'
+  s.summary          = 'A short description of {{ module_info.name }}.'
 
-  s.homepage         = ''
+  s.homepage         = 'https://github.com/OsmaevRSH'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'OsmaevRSH' => 'osmaevrsh@gmail.com' }}
+  s.author           = { 'Osmaev Ruslan' => 'osmaevrsh@gmail.com' }
+  s.source           = { :git => '' }
 
   s.ios.deployment_target = '13.0'
 
-  s.source_files = '{{ module_info.name | capitalize }}/Sources/**/*'
+  s.source_files = 'Sources/**/*'
 end

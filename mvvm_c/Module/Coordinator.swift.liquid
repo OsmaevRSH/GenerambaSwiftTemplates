@@ -1,5 +1,5 @@
 //
-//  {{ module_info.name | capitalize }} module - {{ module_info.file_name }}
+//  {{ module_info.name }} module - {{ module_info.file_name }}
 //  {{ module_info.project_name }}
 //
 //  Created by {{ developer.name }} on {{ date }}.
@@ -10,25 +10,25 @@ import XCoordinator
 import Swinject
 import RxSwift
 
-enum {{ module_info.name | capitalize }}Route: Route {
+enum {{ module_info.name }}Route: Route {
     case {{ module_info.name | downcase }}
 }
 
-class {{ module_info.name | capitalize }}Coordinator: NavigationCoordinator<{{ module_info.name | capitalize }}Route> {
+class {{ module_info.name }}Coordinator: NavigationCoordinator<{{ module_info.name }}Route> {
 
     let bag = DisposeBag()
     
     /// Modules required in this coordinator
     let assembler = Assembler([
-        {{ module_info.name | capitalize }}ModuleAssembly(),
+        {{ module_info.name }}ModuleAssembly(),
     ])
     
     init() {
         super.init(initialRoute: .{{ module_info.name | downcase }})
     }
     
-    override func prepareTransition(for route: {{ module_info.name | capitalize }}Route) -> NavigationTransition {
-        guard let module = assembler.resolver.resolve({{ module_info.name | capitalize }}Module.self) else { return .none() }
+    override func prepareTransition(for route: {{ module_info.name }}Route) -> NavigationTransition {
+        guard let module = assembler.resolver.resolve({{ module_info.name }}Module.self) else { return .none() }
         let input = module.input
         let output = module.output
         

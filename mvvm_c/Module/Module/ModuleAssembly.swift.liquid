@@ -1,5 +1,5 @@
 //
-//  {{ module_info.name | capitalize }} module - {{ module_info.file_name }}
+//  {{ module_info.name }} module - {{ module_info.file_name }}
 //  {{ module_info.project_name }}
 //
 //  Created by {{ developer.name }} on {{ date }}.
@@ -8,16 +8,16 @@
 
 import Swinject
 
-final class {{ module_info.name | capitalize }}ModuleAssembly: Assembly {
+final class {{ module_info.name }}ModuleAssembly: Assembly {
     func assemble(container: Container) {
-        container.register({{ module_info.name | capitalize }}Module.self) { _ in
-            let useCase = {{ module_info.name | capitalize }}UseCaseImpl()
-            let viewModel = {{ module_info.name | capitalize }}ViewModel(useCase: useCase)
-            let controller = {{ module_info.name | capitalize }}ViewController(
+        container.register({{ module_info.name }}Module.self) { _ in
+            let useCase = {{ module_info.name }}UseCaseImpl()
+            let viewModel = {{ module_info.name }}ViewModel(useCase: useCase)
+            let controller = {{ module_info.name }}ViewController(
                 viewModel: viewModel
             )
             
-            return {{ module_info.name | capitalize }}Module(
+            return {{ module_info.name }}Module(
                 view: controller,
                 output: viewModel.output.coord,
                 input: viewModel.input.coord
